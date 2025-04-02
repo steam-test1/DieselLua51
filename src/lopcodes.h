@@ -205,7 +205,7 @@ OP_SETLIST,/*	A B C	R(A)[(C-1)*FPF+i] := R(A+i), 1 <= i <= B	*/
 OP_CLOSE,/*	A 	close all variables in the stack up to (>=) R(A)*/
 OP_CLOSURE,/*	A Bx	R(A) := closure(KPROTO[Bx], R(A), ... ,R(A+n))	*/
 
-OP_VARARG/*	A B	R(A), R(A+1), ..., R(A+B-1) = vararg		*/
+OP_VARARG,/*	A B	R(A), R(A+1), ..., R(A+B-1) = vararg		*/
 OP_TESTNIL,/*   A sBx   if R(A+1) ~= nil then R(A)=R(A+1); pc+=sBx      */
 OP_TFORCALL/*   A B C   R(A), ..., R(A+C-2) := R(A-3)(R(A-2), R(A-1));  */
 } OpCode;
