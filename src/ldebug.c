@@ -543,6 +543,7 @@ static const char *getfuncname (lua_State *L, CallInfo *ci, const char **name) {
 #ifdef LUA_COMPAT_TFORLOOP
     || GET_OPCODE(i) == OP_TFORLOOP
 #endif
+                                    )
     return getobjname(L, ci, GETARG_A(i), name);
   else if (GET_OPCODE(i) == OP_TFORCALL)
     return getobjname(L, ci, GETARG_A(i - 3), name);

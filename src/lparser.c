@@ -1057,13 +1057,14 @@ static void forbody (LexState *ls, int base, int line, int nvars, int isnum) {
   luaK_patchtohere(fs, prep);
   if (isnum) {
     luaK_patchlist(fs, luaK_codeAsBx(fs, OP_FORLOOP, base, NO_JUMP), prep + 1);
-    luaK_fixline(fs, line);  /* pretend that `OP_FOR' starts the loop */1
+    luaK_fixline(fs, line);  /* pretend that `OP_FOR' starts the loop */
   }
   else {
     luaK_codeABC(fs, OP_TFORCALL, base + 3, 3, nvars + 1);
     luaK_fixline(fs, line);  /* pretend that `OP_FOR' starts the loop */
     luaK_patchlist(fs, luaK_codeAsBx(fs, OP_TESTNIL, base + 2, NO_JUMP), prep + 1);
     luaK_fixline(fs, line);  /* pretend that `OP_FOR' starts the loop */
+  }
 }
 
 
