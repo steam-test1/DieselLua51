@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.19)
 
 set(CMAKE_GENERATOR_PLATFORM Win32)
 
-project(lua51)
+project(lua51 C)
 
 # include_directories ( src ${CMAKE_CURRENT_BINARY_DIR} )
 # set ( SRC_CORE src/lapi.c src/lcode.c src/ldebug.c src/ldo.c src/ldump.c src/lfunc.c src/lgc.c src/llex.c
